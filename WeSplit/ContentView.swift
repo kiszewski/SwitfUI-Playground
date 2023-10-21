@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 1
     @State private var tipPercentage = 0
+    
     private var total: Double {
         let percent = Double(tipPercentage) / 100.0
                              
@@ -29,12 +30,14 @@ struct ContentView: View {
                 .keyboardType(.decimalPad)
             TextField("People", value: $numberOfPeople, format: .number)
                 .keyboardType(.numberPad)
-            Picker("Tip", selection: $tipPercentage) {
+            Picker("Tip percent", selection: $tipPercentage) {
                 ForEach(tipPercentages, id: \.self) { v in
                     Text(v.description)
                 }
             }
-            Text(total, format: .currency(code: code))
+            Section("Total") {
+                Text(total, format: .currency(code: code))
+            }
         }
     }
 }
