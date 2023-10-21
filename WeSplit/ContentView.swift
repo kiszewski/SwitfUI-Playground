@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 1
     @State private var tipPercentage = 0
+    @FocusState private var textFieldIsFocused: Bool
     
     private var total: Double {
         let percent = Double(tipPercentage) / 100.0
@@ -25,18 +26,29 @@ struct ContentView: View {
     var code = Locale.current.currency?.identifier ?? "USD"
     
     var body: some View {
-        Form {
-            TextField("Amount", value: $checkAmount, format: .currency(code: code))
-                .keyboardType(.decimalPad)
-            TextField("People", value: $numberOfPeople, format: .number)
-                .keyboardType(.numberPad)
-            Picker("Tip percent", selection: $tipPercentage) {
-                ForEach(tipPercentages, id: \.self) { v in
-                    Text(v.description)
+        NavigationStack {
+            Form {
+                TextField("Amount", value: $checkAmount, format: .currency(code: code))
+                    .keyboardType(.decimalPad)
+                    .focused($textFieldIsFocused)
+                TextField("People", value: $numberOfPeople, format: .number)
+                    .keyboardType(.numberPad)
+                Picker("Tip percent", selection: $tipPercentage) {
+                    ForEach(tipPercentages, id: \.self) { v in
+                        Text(v.description)
+                    }
+                }
+                Section("Total") {
+                    Text(total, format: .currency(code: code))
                 }
             }
-            Section("Total") {
-                Text(total, format: .currency(code: code))
+            .navigationTitle("We Split")
+            .toolbar {
+                if textFieldIsFocused {
+                    Button("Done") {
+                        textFieldIsFocused = false
+                    }
+                }
             }
         }
     }
