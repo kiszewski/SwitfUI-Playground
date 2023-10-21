@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var numberOfPeople = 1
     @State private var tipPercentage = 0
     private var total: Double {
-        var percent = Double(tipPercentage) / 100.0
+        let percent = Double(tipPercentage) / 100.0
                              
         let value = (checkAmount + (percent * checkAmount)) / Double(numberOfPeople)
         
