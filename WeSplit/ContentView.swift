@@ -26,7 +26,9 @@ struct ContentView: View {
     var body: some View {
         Form {
             TextField("Amount", value: $checkAmount, format: .currency(code: code))
+                .keyboardType(.decimalPad)
             TextField("People", value: $numberOfPeople, format: .number)
+                .keyboardType(.numberPad)
             Picker("Tip", selection: $tipPercentage) {
                 ForEach(tipPercentages, id: \.self) { v in
                     Text(v.description)
