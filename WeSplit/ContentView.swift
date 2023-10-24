@@ -14,13 +14,16 @@ struct ContentView: View {
     @State private var tipPercentage = 0
     @FocusState private var textFieldIsFocused: Bool
     
-    private var total: Double {
-        let percent = Double(tipPercentage) / 100.0
-                             
+    private var percent: Double { Double(tipPercentage) / 100.0 }
+    
+    private var amountPerPerson: Double {
         let value = (checkAmount + (percent * checkAmount)) / Double(numberOfPeople)
         
-        print(value)
         return value
+    }
+    
+    private var totalAmount: Double {
+        checkAmount + (percent * checkAmount)
     }
     
     var code = Locale.current.currency?.identifier ?? "USD"
@@ -38,8 +41,11 @@ struct ContentView: View {
                         Text(v.description)
                     }
                 }
+                Section("Amount per person") {
+                    Text(amountPerPerson, format: .currency(code: code))
+                }
                 Section("Total") {
-                    Text(total, format: .currency(code: code))
+                    Text(totalAmount, format: .currency(code: code))
                 }
             }
             .navigationTitle("We Split")
