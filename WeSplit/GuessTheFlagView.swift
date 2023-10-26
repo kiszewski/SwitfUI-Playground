@@ -9,68 +9,21 @@ import SwiftUI
 
 struct GuessTheFlagView: View {
     var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 8) {
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-            }
-            VStack(alignment: .leading, spacing: 8) {
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-            }
-            VStack(alignment: .leading, spacing: 8) {
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-                HStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, World")
-                }
-            }
+        ZStack {
+            VStack {
+                Color.red
+                Color.yellow
+                Color.secondary
+                    .frame(width: 100, height: 50)
+                    
+            }            
+            Text("Content")
+                .foregroundStyle(.blue)
+                .padding(50)
+                .background(.ultraThinMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 32))
         }
+        .ignoresSafeArea()
     }
 }
 
