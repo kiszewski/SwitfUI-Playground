@@ -11,12 +11,16 @@ struct GuessTheFlagView: View {
     var body: some View {
         ZStack {
             VStack {
-                Color.red
-                Color.yellow
-                Color.secondary
-                    .frame(width: 100, height: 50)
-                    
-            }            
+                LinearGradient(stops: [
+                    Gradient.Stop(color: .black, location: 0.05),
+                    Gradient.Stop(color: .yellow, location: 0.95),
+                ], startPoint: .top, endPoint: .bottom)
+                AngularGradient(colors: [.red, .yellow, .green, .blue, .purple, .red], center: .center)
+                RadialGradient(colors: [.orange, .gray], center: .center, startRadius: 90, endRadius: 200)
+                Text("Gradient")
+                    .frame(maxWidth: 300, maxHeight: 100)
+                    .background(.red.gradient)
+            }
             Text("Content")
                 .foregroundStyle(.blue)
                 .padding(50)
