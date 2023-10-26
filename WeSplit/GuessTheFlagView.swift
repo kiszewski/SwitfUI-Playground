@@ -20,6 +20,26 @@ struct GuessTheFlagView: View {
                 Text("Gradient")
                     .frame(maxWidth: 300, maxHeight: 100)
                     .background(.red.gradient)
+                VStack {
+                    Button("Button 1", systemImage: "pencil") { }
+                        .buttonStyle(.bordered)
+                    Button("Button 2", role: .destructive) { }
+                        .buttonStyle(.bordered)
+                    Button { } label: {
+                        HStack {
+                            Image(systemName: "pencil")
+                            Text("Tap Me")
+                        }
+                        .padding()
+                        .foregroundStyle(.white)
+                        .background(.red.gradient)
+                    }
+                    Button("Button 4", role: .destructive) { }
+                        .buttonStyle(.bordered)
+                        .tint(.mint)
+                    Spacer()
+                    
+                }
             }
             Text("Content")
                 .foregroundStyle(.blue)
@@ -29,6 +49,10 @@ struct GuessTheFlagView: View {
         }
         .ignoresSafeArea()
     }
+    
+    func executeDelete() {
+           print("Now deleting…")
+       }
 }
 
 #Preview {
