@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GuessTheFlagView: View {
+    @State var showAlert = false
+    
     var body: some View {
         ZStack {
             VStack {
@@ -25,14 +27,17 @@ struct GuessTheFlagView: View {
                         .buttonStyle(.bordered)
                     Button("Button 2", role: .destructive) { }
                         .buttonStyle(.bordered)
-                    Button { } label: {
+                    Button {showAlert = true } label: {
                         HStack {
                             Image(systemName: "pencil")
-                            Text("Tap Me")
+                            Text("Tap Me To Alert")
                         }
                         .padding()
                         .foregroundStyle(.white)
                         .background(.red.gradient)
+                        .alert("Important Message", isPresented: $showAlert) {
+                            Button ("Ok") {}
+                        }
                     }
                     Button("Button 4", role: .destructive) { }
                         .buttonStyle(.bordered)
@@ -51,8 +56,8 @@ struct GuessTheFlagView: View {
     }
     
     func executeDelete() {
-           print("Now deleting…")
-       }
+        print("Now deleting…")
+    }
 }
 
 #Preview {
