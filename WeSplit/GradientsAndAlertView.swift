@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GuessTheFlagView: View {
+struct GradientsAndAlertView: View {
     @State var showAlert = false
     
     var body: some View {
@@ -61,5 +61,5 @@ struct GuessTheFlagView: View {
 }
 
 #Preview {
-    GuessTheFlagView()
+    GradientsAndAlertView()
 }
