@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F4DA0872AEB0E0100672371 /* GradientsAndAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4DA0862AEB0E0100672371 /* GradientsAndAlertView.swift */; };
 		7F4DA0892AEFCE5300672371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4DA0882AEFCE5300672371 /* Assets.xcassets */; };
+		7F4DA08B2AEFCEE100672371 /* GuessTheFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4DA08A2AEFCEE100672371 /* GuessTheFlagView.swift */; };
 		7F9598CE2A9D57740059884F /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9598CD2A9D57740059884F /* WeSplitApp.swift */; };
 		7F9598D02A9D57740059884F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9598CF2A9D57740059884F /* ContentView.swift */; };
 		7F9598D52A9D57740059884F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9598D42A9D57740059884F /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		7F4DA0862AEB0E0100672371 /* GradientsAndAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsAndAlertView.swift; sourceTree = "<group>"; };
 		7F4DA0882AEFCE5300672371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F4DA08A2AEFCEE100672371 /* GuessTheFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagView.swift; sourceTree = "<group>"; };
 		7F9598CA2A9D57740059884F /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9598CD2A9D57740059884F /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
 		7F9598CF2A9D57740059884F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				7F9598DB2A9D626C0059884F /* ExamplesForm.swift */,
 				7FBF5B9B2AE9435E00DB0F29 /* LengthConverterView.swift */,
 				7F4DA0862AEB0E0100672371 /* GradientsAndAlertView.swift */,
+				7F4DA08A2AEFCEE100672371 /* GuessTheFlagView.swift */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				7FBF5B9C2AE9435E00DB0F29 /* LengthConverterView.swift in Sources */,
 				7F9598CE2A9D57740059884F /* WeSplitApp.swift in Sources */,
 				7F9598DC2A9D626C0059884F /* ExamplesForm.swift in Sources */,
+				7F4DA08B2AEFCEE100672371 /* GuessTheFlagView.swift in Sources */,
 				7F4DA0872AEB0E0100672371 /* GradientsAndAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
