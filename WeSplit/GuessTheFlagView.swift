@@ -10,9 +10,16 @@ import SwiftUI
 struct GuessTheFlagView: View {
     let countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"]
     
-    @State var showAlert: Bool = false
     @State var answerIsCorrect: Bool = false
     @State var correctAnswer = Int.random(in: 0...4)
+    @State var score = 0
+    @State var remainingTries = 8
+    
+    @State var showAnswerAlert: Bool = false
+    @State var answerAlertTitle: String?
+    @State var answerAlertMessage: String?
+    
+    @State var showResultAlert: Bool = false
     
     var body: some View {
         ZStack {
@@ -20,7 +27,7 @@ struct GuessTheFlagView: View {
                 .init(color: Color(red: 0.1, green: 0.2, blue: 0.45), location: 0.3),
                 .init(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3),
             ], center: .top, startRadius: 200, endRadius: 700)
-                .ignoresSafeArea()
+            .ignoresSafeArea()
             VStack {
                 Text("Tap the flag of")
                     .font(.headline.weight(.light))
@@ -46,10 +53,13 @@ struct GuessTheFlagView: View {
                     }
                     .background(.regularMaterial)
                     .clipShape(.rect(cornerRadius: 20))
-                    .alert(isPresented: $showAlert, content: {
-                        Alert(title: Text(answerIsCorrect ? "Answer is correct" : "Answer is incorrect"))
-                    })
-                    Text("Score: ???")
+                    .alert(isPresented: $showAnswerAlert) {
+                        Alert(title: Text(answerAlertTitle ?? ""), message: Text(answerAlertMessage ?? ""))
+                    }
+                    .alert("The final result is \(score)/8", isPresented: $showResultAlert) {
+                        Button(action: reset) { Text("Reset") }
+                    }
+                    Text("Score: \(score)")
                         .foregroundStyle(.white)
                         .font(.title.bold())
                 }
@@ -58,13 +68,29 @@ struct GuessTheFlagView: View {
         
     }
     
+    func reset() {
+        remainingTries = 8
+        score = 0
+        correctAnswer = Int.random(in: 0...countries.count)
+    }
+    
     func checkAnswer(answer: String) {
+        remainingTries -= 1
         answerIsCorrect = countries[correctAnswer] == answer
-        showAlert = true
         
         if answerIsCorrect {
-            correctAnswer = Int.random(in: 0...countries.count)
+            score += 1
+            answerAlertTitle = "Answer is correct"
+            answerAlertMessage = nil
+        } else {
+            answerAlertTitle = "Answer is incorrect"
+            answerAlertMessage = "This is the flag of \(answer)"
         }
+        
+        showAnswerAlert = true
+        correctAnswer = Int.random(in: 0...countries.count)
+        
+        showResultAlert =  remainingTries == 0
     }
 }
 
