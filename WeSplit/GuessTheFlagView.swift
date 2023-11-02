@@ -42,9 +42,7 @@ struct GuessTheFlagView: View {
                                 Button {
                                     checkAnswer(answer: c)
                                 } label: {
-                                    Image(c)
-                                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                                        .shadow(radius: 5)
+                                    FlagImage(c)
                                 }
                             }
                         }
@@ -96,4 +94,18 @@ struct GuessTheFlagView: View {
 
 #Preview {
     GuessTheFlagView()
+}
+
+struct FlagImage: View {
+    var country: String
+    
+   init(_ countryFlag: String) {
+        country = countryFlag
+    }
+    
+    var body: some View {
+        Image(country)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .shadow(radius: 5)
+    }
 }
