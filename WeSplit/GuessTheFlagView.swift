@@ -109,3 +109,17 @@ struct FlagImage: View {
             .shadow(radius: 5)
     }
 }
+
+struct BlueTitle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+    }
+}
+
+extension View {
+    func blueTitle() -> some View {
+        self.modifier(BlueTitle())
+    }
+}
