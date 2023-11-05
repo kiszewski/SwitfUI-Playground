@@ -14,6 +14,7 @@
 		7F9598D02A9D57740059884F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9598CF2A9D57740059884F /* ContentView.swift */; };
 		7F9598D52A9D57740059884F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9598D42A9D57740059884F /* Preview Assets.xcassets */; };
 		7F9598DC2A9D626C0059884F /* ExamplesForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9598DB2A9D626C0059884F /* ExamplesForm.swift */; };
+		7FB437A92AF7C8B600B8290B /* CustomBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB437A82AF7C8B600B8290B /* CustomBindingView.swift */; };
 		7FBF5B9C2AE9435E00DB0F29 /* LengthConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF5B9B2AE9435E00DB0F29 /* LengthConverterView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		7F9598CF2A9D57740059884F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F9598D42A9D57740059884F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F9598DB2A9D626C0059884F /* ExamplesForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesForm.swift; sourceTree = "<group>"; };
+		7FB437A82AF7C8B600B8290B /* CustomBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBindingView.swift; sourceTree = "<group>"; };
 		7FBF5B9B2AE9435E00DB0F29 /* LengthConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthConverterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				7FBF5B9B2AE9435E00DB0F29 /* LengthConverterView.swift */,
 				7F4DA0862AEB0E0100672371 /* GradientsAndAlertView.swift */,
 				7F4DA08A2AEFCEE100672371 /* GuessTheFlagView.swift */,
+				7FB437A82AF7C8B600B8290B /* CustomBindingView.swift */,
 			);
 			path = PlaygroundApp;
 			sourceTree = "<group>";
@@ -107,7 +110,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					7F9598C92A9D57740059884F = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9598D02A9D57740059884F /* ContentView.swift in Sources */,
+				7FB437A92AF7C8B600B8290B /* CustomBindingView.swift in Sources */,
 				7FBF5B9C2AE9435E00DB0F29 /* LengthConverterView.swift in Sources */,
 				7F9598CE2A9D57740059884F /* PlaygroundApp.swift in Sources */,
 				7F9598DC2A9D626C0059884F /* ExamplesForm.swift in Sources */,
@@ -197,6 +201,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -257,6 +262,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -282,7 +288,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeSplit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PlaygroundApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 6MM859C74Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -311,7 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeSplit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PlaygroundApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 6MM859C74Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
