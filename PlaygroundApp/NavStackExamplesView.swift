@@ -12,7 +12,6 @@ struct Car: Identifiable, Hashable {
     let name: String
 }
 
-
 struct Brand: Identifiable, Hashable {
     let id =  NSUUID().uuidString
     let name: String
@@ -32,10 +31,10 @@ struct NavStackExamplesView: View {
         Brand(name: "Audi")
     ]
     
-    @State private var path = [Brand]()
+    @State private var navPath = NavigationPath()
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $navPath) {
             List {
                 Section("Cars List") {
                     ForEach(cars) { car in
@@ -53,7 +52,7 @@ struct NavStackExamplesView: View {
                     }
                 }
                 
-                Button(action: { path = brands }) {
+                Button(action: { navPath = NavigationPath(brands) }) {
                     Text("Navigate all brands")
                 }
             }
@@ -65,7 +64,7 @@ struct NavStackExamplesView: View {
                     Spacer()
                     viewForBrand(brand)
                     Spacer()
-                    Button(action: { path = [] }) {
+                    Button(action: { navPath = NavigationPath() }) {
                         Text("Back to root")
                     }
                 }
