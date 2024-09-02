@@ -58,4 +58,8 @@ class RedRectViewController : UIViewController {
         redRectView.layer.add(animation, forKey: "basic")
         redRectView.layer.transform = CATransform3DMakeScale(2, 2, 1)
     }
+    
+    func rotate() {
+        
+    }
 }
