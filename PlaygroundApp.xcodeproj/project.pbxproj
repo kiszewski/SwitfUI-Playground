@@ -57,6 +57,15 @@
 		7F4AC7062C86713500DD3A3A /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
+				7F4AC7022C7FCC0D00DD3A3A /* RedRectViewController.swift */,
+				7F4AC7042C7FCE0E00DD3A3A /* UIKitPlaygroundView.swift */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		7F4AC7072C86716600DD3A3A /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
 				7F54EEBD2B573ECD0039BF51 /* PlaygroundListView.swift */,
 				7F4DA08A2AEFCEE100672371 /* GuessTheFlagView.swift */,
 				7FBF5B9B2AE9435E00DB0F29 /* LengthConverterView.swift */,
@@ -67,15 +76,6 @@
 				7F9598CF2A9D57740059884F /* ContentView.swift */,
 				7FF3ABC32AFAEC4700A29EF8 /* BetterRestView.swift */,
 				7F2E305D2B51DD30005AFEF1 /* NavStackExamplesView.swift */,
-				7F4AC7022C7FCC0D00DD3A3A /* RedRectViewController.swift */,
-				7F4AC7042C7FCE0E00DD3A3A /* UIKitPlaygroundView.swift */,
-			);
-			path = UIViews;
-			sourceTree = "<group>";
-		};
-		7F4AC7072C86716600DD3A3A /* SwiftUIViews */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
