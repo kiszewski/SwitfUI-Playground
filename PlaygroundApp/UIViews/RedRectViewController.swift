@@ -9,16 +9,29 @@ import UIKit
 
 class RedRectViewController : UIViewController {
     let redRectView = UIView()
+    let buttonView = UIKitPlaygroundButton()
+    
     let _width: CGFloat = 120
     let _height: CGFloat = 70
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redRectView.backgroundColor = .systemRed
+        view.backgroundColor = .systemYellow
         
-        view.backgroundColor = .systemGray
+        redRectView.backgroundColor = .systemRed
         view.addSubview(redRectView)
+        
+        buttonView.setTitle("Tap me", for: .normal)
+        buttonView.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        view.addSubview(buttonView)
+        
+    }
+    
+    @objc func buttonTapped(sender : UIButton) {
+        print("Tapped Button 1")
+        scaleUp()
+        print("Tapped Button 2")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,6 +41,7 @@ class RedRectViewController : UIViewController {
         let centerY = view.bounds.midY
         
         redRectView.frame = CGRect(x: centerX - _width / 2, y: centerY - _height / 2, width: _width, height: _height)
+        buttonView.frame = CGRect(x: centerX - _width / 2, y: 32, width: _width, height: 48)
         
         scaleUp()
     }
