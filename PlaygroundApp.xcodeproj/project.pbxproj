@@ -14,6 +14,12 @@
 		7F4DA0892AEFCE5300672371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4DA0882AEFCE5300672371 /* Assets.xcassets */; };
 		7F4DA08B2AEFCEE100672371 /* GuessTheFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4DA08A2AEFCEE100672371 /* GuessTheFlagView.swift */; };
 		7F54EEBE2B573ECD0039BF51 /* PlaygroundListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54EEBD2B573ECD0039BF51 /* PlaygroundListView.swift */; };
+		7F8A99062C89144900FE1034 /* UIKitPlaygroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A99052C89144900FE1034 /* UIKitPlaygroundButton.swift */; };
+		7F8A99082C89151400FE1034 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A99072C89151400FE1034 /* AppFont.swift */; };
+		7F8A990E2C8915D000FE1034 /* PlaywriteCU-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A990A2C8915D000FE1034 /* PlaywriteCU-Light.ttf */; };
+		7F8A990F2C8915D000FE1034 /* PlaywriteCU-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A990B2C8915D000FE1034 /* PlaywriteCU-Thin.ttf */; };
+		7F8A99102C8915D000FE1034 /* PlaywriteCU-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A990C2C8915D000FE1034 /* PlaywriteCU-Regular.ttf */; };
+		7F8A99112C8915D000FE1034 /* PlaywriteCU-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A990D2C8915D000FE1034 /* PlaywriteCU-ExtraLight.ttf */; };
 		7F9598CE2A9D57740059884F /* PlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9598CD2A9D57740059884F /* PlaygroundApp.swift */; };
 		7F9598D02A9D57740059884F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9598CF2A9D57740059884F /* ContentView.swift */; };
 		7F9598D52A9D57740059884F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9598D42A9D57740059884F /* Preview Assets.xcassets */; };
@@ -32,6 +38,13 @@
 		7F4DA0882AEFCE5300672371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F4DA08A2AEFCEE100672371 /* GuessTheFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagView.swift; sourceTree = "<group>"; };
 		7F54EEBD2B573ECD0039BF51 /* PlaygroundListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundListView.swift; sourceTree = "<group>"; };
+		7F8A99052C89144900FE1034 /* UIKitPlaygroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPlaygroundButton.swift; sourceTree = "<group>"; };
+		7F8A99072C89151400FE1034 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		7F8A990A2C8915D000FE1034 /* PlaywriteCU-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlaywriteCU-Light.ttf"; sourceTree = "<group>"; };
+		7F8A990B2C8915D000FE1034 /* PlaywriteCU-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlaywriteCU-Thin.ttf"; sourceTree = "<group>"; };
+		7F8A990C2C8915D000FE1034 /* PlaywriteCU-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlaywriteCU-Regular.ttf"; sourceTree = "<group>"; };
+		7F8A990D2C8915D000FE1034 /* PlaywriteCU-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlaywriteCU-ExtraLight.ttf"; sourceTree = "<group>"; };
+		7F8A99122C89194A00FE1034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F9598CA2A9D57740059884F /* PlaygroundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaygroundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9598CD2A9D57740059884F /* PlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundApp.swift; sourceTree = "<group>"; };
 		7F9598CF2A9D57740059884F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +72,8 @@
 			children = (
 				7F4AC7022C7FCC0D00DD3A3A /* RedRectViewController.swift */,
 				7F4AC7042C7FCE0E00DD3A3A /* UIKitPlaygroundView.swift */,
+				7F8A99052C89144900FE1034 /* UIKitPlaygroundButton.swift */,
+				7F8A99072C89151400FE1034 /* AppFont.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -80,6 +95,17 @@
 			path = SwiftUIViews;
 			sourceTree = "<group>";
 		};
+		7F8A99092C8915AF00FE1034 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7F8A990D2C8915D000FE1034 /* PlaywriteCU-ExtraLight.ttf */,
+				7F8A990A2C8915D000FE1034 /* PlaywriteCU-Light.ttf */,
+				7F8A990C2C8915D000FE1034 /* PlaywriteCU-Regular.ttf */,
+				7F8A990B2C8915D000FE1034 /* PlaywriteCU-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7F9598C12A9D57740059884F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +125,8 @@
 		7F9598CC2A9D57740059884F /* PlaygroundApp */ = {
 			isa = PBXGroup;
 			children = (
+				7F8A99122C89194A00FE1034 /* Info.plist */,
+				7F8A99092C8915AF00FE1034 /* Fonts */,
 				7F4DA0882AEFCE5300672371 /* Assets.xcassets */,
 				7F9598CD2A9D57740059884F /* PlaygroundApp.swift */,
 				7F4AC7072C86716600DD3A3A /* SwiftUIViews */,
@@ -174,6 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8A99112C8915D000FE1034 /* PlaywriteCU-ExtraLight.ttf in Resources */,
+				7F8A990E2C8915D000FE1034 /* PlaywriteCU-Light.ttf in Resources */,
+				7F8A990F2C8915D000FE1034 /* PlaywriteCU-Thin.ttf in Resources */,
+				7F8A99102C8915D000FE1034 /* PlaywriteCU-Regular.ttf in Resources */,
 				7F9598D52A9D57740059884F /* Preview Assets.xcassets in Resources */,
 				7F4DA0892AEFCE5300672371 /* Assets.xcassets in Resources */,
 			);
@@ -195,7 +227,9 @@
 				7F2E305E2B51DD30005AFEF1 /* NavStackExamplesView.swift in Sources */,
 				7FBF5B9C2AE9435E00DB0F29 /* LengthConverterView.swift in Sources */,
 				7F9598CE2A9D57740059884F /* PlaygroundApp.swift in Sources */,
+				7F8A99062C89144900FE1034 /* UIKitPlaygroundButton.swift in Sources */,
 				7F9598DC2A9D626C0059884F /* ExamplesForm.swift in Sources */,
+				7F8A99082C89151400FE1034 /* AppFont.swift in Sources */,
 				7F54EEBE2B573ECD0039BF51 /* PlaygroundListView.swift in Sources */,
 				7F4DA08B2AEFCEE100672371 /* GuessTheFlagView.swift in Sources */,
 				7F4DA0872AEB0E0100672371 /* GradientsAndAlertView.swift in Sources */,
@@ -332,6 +366,8 @@
 				DEVELOPMENT_TEAM = 6MM859C74Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlaygroundApp/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To listen the user's voice";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
