@@ -16,6 +16,7 @@ struct PlaygroundListView: View {
     @State private var showGame = false
     @State private var showBetterRest = false
     @State private var showUIKitPlaygroud = false
+    @State private var showUserEnvironmentObject = false
 
     var body: some View {
         
@@ -37,6 +38,8 @@ struct PlaygroundListView: View {
                     { showBetterRest = true }
                 Button("UIKit Playground")
                     { showUIKitPlaygroud = true }
+                Button("User Environment Object")
+                    { showUserEnvironmentObject = true }
             }
             .navigationDestination(isPresented: $showLengthConverter) { LengthConverterView()
             }
@@ -60,6 +63,9 @@ struct PlaygroundListView: View {
             }
             .navigationDestination(isPresented: $showUIKitPlaygroud) {
                 UIKitPlaygroundView()
+            }
+            .navigationDestination(isPresented: $showUserEnvironmentObject) {
+                EditUserView()
             }
 
         }

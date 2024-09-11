@@ -28,6 +28,8 @@
 		7FB437A92AF7C8B600B8290B /* CustomBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB437A82AF7C8B600B8290B /* CustomBindingView.swift */; };
 		7FB437AB2AF7CC7F00B8290B /* RockPaperScissorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB437AA2AF7CC7F00B8290B /* RockPaperScissorsView.swift */; };
 		7FBF5B9C2AE9435E00DB0F29 /* LengthConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF5B9B2AE9435E00DB0F29 /* LengthConverterView.swift */; };
+		7FE1CBC42C92484F001B82C4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE1CBC32C92484F001B82C4 /* UserViewModel.swift */; };
+		7FE1CBC72C924957001B82C4 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE1CBC62C924957001B82C4 /* EditUserView.swift */; };
 		7FF3ABC42AFAEC4700A29EF8 /* BetterRestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3ABC32AFAEC4700A29EF8 /* BetterRestView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		7FB437A82AF7C8B600B8290B /* CustomBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBindingView.swift; sourceTree = "<group>"; };
 		7FB437AA2AF7CC7F00B8290B /* RockPaperScissorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsView.swift; sourceTree = "<group>"; };
 		7FBF5B9B2AE9435E00DB0F29 /* LengthConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthConverterView.swift; sourceTree = "<group>"; };
+		7FE1CBC32C92484F001B82C4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		7FE1CBC62C924957001B82C4 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		7FF3ABC32AFAEC4700A29EF8 /* BetterRestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,7 @@
 		7F4AC7072C86716600DD3A3A /* SwiftUIViews */ = {
 			isa = PBXGroup;
 			children = (
+				7FE1CBC52C924923001B82C4 /* ViewModels */,
 				7F54EEBD2B573ECD0039BF51 /* PlaygroundListView.swift */,
 				7F4DA08A2AEFCEE100672371 /* GuessTheFlagView.swift */,
 				7FBF5B9B2AE9435E00DB0F29 /* LengthConverterView.swift */,
@@ -94,6 +99,7 @@
 				7FF3ABC32AFAEC4700A29EF8 /* BetterRestView.swift */,
 				7F2E305D2B51DD30005AFEF1 /* NavStackExamplesView.swift */,
 				7F02BCF22C90F90700D1711C /* CustomTextField.swift */,
+				7FE1CBC62C924957001B82C4 /* EditUserView.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -145,6 +151,14 @@
 				7F9598D42A9D57740059884F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7FE1CBC52C924923001B82C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7FE1CBC32C92484F001B82C4 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,11 +244,13 @@
 				7FB437A92AF7C8B600B8290B /* CustomBindingView.swift in Sources */,
 				7F2E305E2B51DD30005AFEF1 /* NavStackExamplesView.swift in Sources */,
 				7FBF5B9C2AE9435E00DB0F29 /* LengthConverterView.swift in Sources */,
+				7FE1CBC72C924957001B82C4 /* EditUserView.swift in Sources */,
 				7F9598CE2A9D57740059884F /* PlaygroundApp.swift in Sources */,
 				7F8A99062C89144900FE1034 /* UIKitPlaygroundButton.swift in Sources */,
 				7F9598DC2A9D626C0059884F /* ExamplesForm.swift in Sources */,
 				7F8A99082C89151400FE1034 /* AppFont.swift in Sources */,
 				7F54EEBE2B573ECD0039BF51 /* PlaygroundListView.swift in Sources */,
+				7FE1CBC42C92484F001B82C4 /* UserViewModel.swift in Sources */,
 				7F4DA08B2AEFCEE100672371 /* GuessTheFlagView.swift in Sources */,
 				7F4DA0872AEB0E0100672371 /* GradientsAndAlertView.swift in Sources */,
 			);
